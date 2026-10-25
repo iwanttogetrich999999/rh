@@ -77,6 +77,9 @@ local function LoadMainHub(v)
     })
     local RF = loadstring(v)()
     RF(Library)
+	ThemeManager:SetLibrary(Library)
+	ThemeManager:SetFolder("RAMPAGEHUBTHEMES")
+	ThemeManager:LoadDefault()
 end
 
 
