@@ -75,7 +75,10 @@ local function LoadMainHub(v)
         AlwaysOnTop = true,
         Center = true,
     })
-    local RF = loadstring(v)()
+    local RF,err = loadstring(v)
+    if not RF then
+        print(err)
+    end
     RF(Library,Window)
     ThemeManager:SetLibrary(Library)
 	ThemeManager:SetFolder("RAMPAGEHUBTHEMES")
