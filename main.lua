@@ -4,7 +4,6 @@ end
 local repo = "https://raw.githubusercontent.com/deividcomsono/Obsidian/main/"
 local Library = loadstring(game:HttpGet(repo .. "Library.lua"))()
 local ThemeManager = loadstring(game:HttpGet(repo .. "addons/ThemeManager.lua"))()
-local SaveManager = loadstring(game:HttpGet(repo .. "addons/SaveManager.lua"))()
 
 local Options = Library.Options
 local Toggles = Library.Toggles
@@ -79,7 +78,7 @@ local function LoadMainHub(v)
     if not RF then
         print(err)
     end
-    RF(Library,Window)
+    RF()(Library,Window)
     ThemeManager:SetLibrary(Library)
 	ThemeManager:SetFolder("RAMPAGEHUBTHEMES")
 	ThemeManager:LoadDefault()
