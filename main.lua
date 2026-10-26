@@ -20,7 +20,7 @@ getgenv().RampageHub = true
 
 local Loading = Library:CreateLoading({
     Title = "RAMPAGE HUB",
-    Icon = "https://i.ibb.co/Qj7H9hRd/juggernaut.png",
+    Icon = 127376716126789,
     TotalSteps = 3
 })
 -- Loading...
@@ -48,7 +48,7 @@ local Window = Library:CreateWindow({
 	Title = "RAMPAGE HUB",
     AutoShow = true,
 	Footer = "version: 0.0.0",
-	Icon = "https://i.ibb.co/Qj7H9hRd/juggernaut.png",
+	Icon = 127376716126789,
 	NotifySide = "Right",
     Center = true,
     Resizable = true,
@@ -66,7 +66,7 @@ local function LoadMainHub(v)
 	    Title = "RAMPAGE HUB",
         AutoShow = true,
 	    Footer = "version: 0.0.0",
-	    Icon = "https://i.ibb.co/Qj7H9hRd/juggernaut.png",
+	    Icon = 127376716126789,
 	    NotifySide = "Right",
         Center = true,
         Resizable = true,
@@ -75,8 +75,8 @@ local function LoadMainHub(v)
         AlwaysOnTop = true,
         Center = true,
     })
-    local RF = loadstring(v)
-    RF(Library)
+    local RF = loadstring(v)()
+    RF(Library,Window)
     ThemeManager:SetLibrary(Library)
 	ThemeManager:SetFolder("RAMPAGEHUBTHEMES")
 	ThemeManager:LoadDefault()
